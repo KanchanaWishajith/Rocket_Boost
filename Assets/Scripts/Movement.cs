@@ -4,18 +4,25 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     [SerializeField] InputAction thrsut;
+    [SerializeField] float thrustStrength = 100f;
+
+    Rigidbody rb;
+
+    private void Start()
+    {
+       rb = GetComponent<Rigidbody>(); 
+    }
 
     private void OnEnable()
     {
         thrsut.Enable();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(thrsut.IsPressed())
         {
-            Debug.Log("Dang, I need some space");
-            // transform.Translate(Vector3.forward * Time.deltaTime);
+            rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
         }
     }
 }
