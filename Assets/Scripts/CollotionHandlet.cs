@@ -12,13 +12,25 @@ private void OnCollisionEnter(Collision other)
                 break;
             case "Finish":
                 Debug.Log("You win");
-                break;
-            case "Fuel":
-                Debug.Log("You get fuel");
+                LoadNextLevel();
                 break;
             default:
                 ReloadLevel();
                 break;
+        }
+
+        void LoadNextLevel()
+        {
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            int nextSceneIndex = currentSceneIndex + 1;
+
+            if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+            {
+                nextSceneIndex = 0;
+            }
+
+
+            SceneManager.LoadScene(nextSceneIndex);
         }
 
         void ReloadLevel()
