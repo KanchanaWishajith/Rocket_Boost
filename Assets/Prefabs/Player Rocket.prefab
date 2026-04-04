@@ -131,7 +131,7 @@ MonoBehaviour:
       m_Action: Rotation
       m_Flags: 8
     m_Flags: 0
-  thrustStrength: 1000
+  thrustStrength: 3000
   rotationStrength: 100
   mainEngine: {fileID: 8300000, guid: 43c2013db34961a4ca288e2477064741, type: 3}
 --- !u!54 &1469781351381854441
