@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class CollotionHandlet : MonoBehaviour
 {
     [SerializeField] float levelLoadDelay = 2f;
-    [SerializeField] AudioClip sucess;
-    [SerializeField] AudioClip crash;
+    [SerializeField] AudioClip sucessSFX;
+    [SerializeField] AudioClip crashSFX;
+    [SerializeField] ParticleSystem sucessParticles;
+    [SerializeField] ParticleSystem crashParticles;
 
     AudioSource audioSource;
 
@@ -37,7 +39,8 @@ public class CollotionHandlet : MonoBehaviour
     {
         isControllable = false;
         audioSource.Stop();
-        audioSource.PlayOneShot(sucess);
+        audioSource.PlayOneShot(sucessSFX);
+        sucessParticles.Play();
         GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", levelLoadDelay);
     }
@@ -46,7 +49,8 @@ public class CollotionHandlet : MonoBehaviour
     {
         isControllable = false;
         audioSource.Stop();
-        audioSource.PlayOneShot(crash);
+        audioSource.PlayOneShot(crashSFX);
+        crashParticles.Play();
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", levelLoadDelay);
     }
