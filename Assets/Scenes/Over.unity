@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.3, y: 3.03, z: -10}
+  m_LocalPosition: {x: -20.3, y: 3.06, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -652,7 +652,7 @@ Transform:
   m_GameObject: {fileID: 1494007659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.3, y: 3.03, z: -10}
+  m_LocalPosition: {x: -20.3, y: 3.06, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -886,7 +886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2185631136365440011, guid: f7caf29fe85558843ad139c556f33f1a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.03
+      value: 3.06
       objectReference: {fileID: 0}
     - target: {fileID: 2185631136365440011, guid: f7caf29fe85558843ad139c556f33f1a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -920,6 +920,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6056756096660809066, guid: f7caf29fe85558843ad139c556f33f1a, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431596640146347123, guid: f7caf29fe85558843ad139c556f33f1a, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189778301943129954, guid: f7caf29fe85558843ad139c556f33f1a, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -936,5 +948,5 @@ SceneRoots:
   - {fileID: 1112825849}
   - {fileID: 625835734211133003}
   - {fileID: 1964558070}
-  - {fileID: 8024282679200088994}
   - {fileID: 1565212331914992873}
+  - {fileID: 8024282679200088994}
